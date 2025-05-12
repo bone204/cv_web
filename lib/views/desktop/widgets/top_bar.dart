@@ -17,7 +17,27 @@ class TopBar extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Image.asset('assets/images/logo_UIT.jpg', width: 60, height: 60),
+            Row(
+              children: [
+                Image.asset(
+                  'assets/images/logo_UIT.jpg', 
+                  width: ResizeableUtils.scaleSize(74, context), 
+                  height: ResizeableUtils.scaleSize(60, context)
+                ),
+                SizedBox(width: ResizeableUtils.scaleSize(10, context)),
+                Text(
+                  AppText.textUniversityOfInformationTechnology.text, 
+                  softWrap: true,
+                  overflow: TextOverflow.visible,
+                  style: TextStyle(
+                    fontSize: ResizeableUtils.scaleText(16, context),
+                    fontWeight: FontWeight.w900,
+                    fontFamily: 'Roboto',
+                    color: AppColors.logoUIT,
+                  ),
+                ),
+              ],
+            ),
             Row(
               children: [
                 CustomTextButton(text: AppText.textHome.text, onPressed: () {}),

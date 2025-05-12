@@ -8,13 +8,35 @@ class PortfolioScreenDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        child: Column(
-          children: [
-            TopBar(),
-            HomeScreen(),
-          ],
-        ),
+      body: Stack(
+        children: [
+          SingleChildScrollView(
+            child: Column(
+              children: [
+                SizedBox(
+                  height: MediaQuery.of(context).size.height,
+                  child: const HomeScreen(),
+                ),
+                Container(
+                  height: 500,
+                  color: Colors.blue,
+                  child: const Center(child: Text('Section 2')),
+                ),
+                Container(
+                  height: 500,
+                  color: Colors.blue,
+                  child: const Center(child: Text('Section 2')),
+                ),
+              ],
+            ),
+          ),
+          const Positioned(
+            top: 0,
+            left: 0,
+            right: 0,
+            child: TopBar(),
+          ),
+        ],
       ),
     );
   }

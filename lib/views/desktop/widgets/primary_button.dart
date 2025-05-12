@@ -2,16 +2,16 @@ import 'package:cv_web/core/constants/app_colors.dart';
 import 'package:cv_web/core/utils/resizeable_utils.dart';
 import 'package:flutter/material.dart';
 
-class SecondaryButton extends StatefulWidget {
-  const SecondaryButton({super.key, required this.onPressed, required this.text});
+class PrimaryButton extends StatefulWidget {
+  const PrimaryButton({super.key, required this.onPressed, required this.text});
   final void Function() onPressed;
   final String text;
 
   @override
-  State<SecondaryButton> createState() => _SecondaryButtonState();
+  State<PrimaryButton> createState() => _PrimaryButtonState();
 }
 
-class _SecondaryButtonState extends State<SecondaryButton> {
+class _PrimaryButtonState extends State<PrimaryButton> {
   bool isHovered = false;
 
   @override
@@ -22,18 +22,13 @@ class _SecondaryButtonState extends State<SecondaryButton> {
       child: TextButton(
         onPressed: widget.onPressed,
         style: TextButton.styleFrom(
-          // ignore: deprecated_member_use
-          backgroundColor: isHovered ? AppColors.blue.withOpacity(0.1) : AppColors.white,
+          backgroundColor: isHovered ? AppColors.deepBlue : AppColors.blue,
           fixedSize: Size( 
             ResizeableUtils.scaleSize(130, context),
             ResizeableUtils.scaleSize(50, context),
           ),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(5.33),
-            side: BorderSide(
-              color: AppColors.blue,
-              width: 1.33,
-            ),
           ),
         ),
         child: Text(
@@ -42,7 +37,7 @@ class _SecondaryButtonState extends State<SecondaryButton> {
             fontSize: ResizeableUtils.scaleText(14, context),
             fontFamily: 'Roboto',
             fontWeight: FontWeight.w400,
-            color: AppColors.blue,
+            color: AppColors.white,
           ),
         ),
       ),
