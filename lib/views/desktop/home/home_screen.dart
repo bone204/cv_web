@@ -1,9 +1,11 @@
 import 'package:cv_web/app_texts.dart';
 import 'package:cv_web/core/constants/app_colors.dart';
 import 'package:cv_web/core/utils/resizeable_utils.dart';
+import 'package:cv_web/views/desktop/widgets/liquid_selfie_widget.dart';
 import 'package:cv_web/views/desktop/widgets/primary_button.dart';
 import 'package:cv_web/views/desktop/widgets/typerwritter_effect.dart';
 import 'package:flutter/material.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -73,12 +75,11 @@ class HomeScreen extends StatelessWidget {
           SizedBox(
             width: ResizeableUtils.scaleSize(100, context),
           ),
-          SizedBox(
-            width: ResizeableUtils.scaleSize(650, context),
+          LiquidSelfieWidget(
+            width: ResizeableUtils.scaleSize(500, context),
             height: ResizeableUtils.scaleSize(400, context),
-            child: Image.asset('assets/images/img_selfie.png', fit: BoxFit.cover,),
-          )
-        ]
+          ),
+        ],
       ),
     );
   }

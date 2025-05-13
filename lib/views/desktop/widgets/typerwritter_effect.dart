@@ -35,7 +35,6 @@ class _TypewriterEffectState extends State<TypewriterEffect> {
         });
         _startTyping();
       } else {
-        // Reset and start again after a delay
         Future.delayed(const Duration(seconds: 1), () {
           setState(() {
             _displayText = '';

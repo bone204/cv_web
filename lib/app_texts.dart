@@ -24,7 +24,7 @@ Map<AppText, String> texts = {
   AppText.textPortfolio: "Portfolio",
   AppText.textUIT: "UIT", 
   AppText.textUniversityOfInformationTechnology: "University of\nInformation Technology",
-  AppText.textHello: "Hello, I am Truong",
+  AppText.textHello: "Hello, I am Truong - Welcome to my portfolio website",
   AppText.textOverview: "I build cross-platform apps for\nmobile and web using ",
   AppText.textFlutter: "Flutter",
   AppText.textDescription: "I’m learning to create clean and simple apps people can actually use.\nI focus on building apps that look good and run smoothly.",
