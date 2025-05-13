@@ -10,6 +10,8 @@ enum AppText {
   textDescription,
   textGetInTouch,
   textFlutter,
+  textSkills,
+  textExpertise,
 }
 
 Map<AppText, String> texts = {
@@ -29,6 +31,8 @@ Map<AppText, String> texts = {
   AppText.textFlutter: "Flutter",
   AppText.textDescription: "I’m learning to create clean and simple apps people can actually use.\nI focus on building apps that look good and run smoothly.",
   AppText.textGetInTouch: "Get in touch",
+  AppText.textSkills: "My Skills",
+  AppText.textExpertise: "My Expertise",
 };
 
 extension AppTexts on AppText {

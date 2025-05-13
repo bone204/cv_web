@@ -11,7 +11,17 @@ class TopBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: AppColors.white,
+      decoration: BoxDecoration(
+        color: AppColors.white,
+        boxShadow: [
+          BoxShadow(
+            // ignore: deprecated_member_use
+            color: AppColors.black.withOpacity(0.1),
+            blurRadius: 80,
+            offset: Offset(0, 5.33),
+          ),
+        ],
+      ),
       child: Padding(
         padding: EdgeInsets.symmetric(vertical: 16, horizontal: 60),
         child: Row(

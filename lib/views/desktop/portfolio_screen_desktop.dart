@@ -1,4 +1,6 @@
-import 'package:cv_web/views/desktop/home/home_screen.dart';
+import 'package:cv_web/core/utils/resizeable_utils.dart';
+import 'package:cv_web/views/desktop/home/home_view.dart';
+import 'package:cv_web/views/desktop/skills/skills_view.dart';
 import 'package:cv_web/views/desktop/widgets/top_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -14,13 +16,16 @@ class PortfolioScreenDesktop extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(
-                  height: MediaQuery.of(context).size.height,
-                  child: const HomeScreen(),
+                  height: ResizeableUtils.scaleSize(50, context),
+                  child: const Center(child: Text('Section 1')),
                 ),
-                Container(
-                  height: 500,
-                  color: Colors.blue,
-                  child: const Center(child: Text('Section 2')),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height,
+                  child: const HomeView(),
+                ),
+                SizedBox(
+                  height: ResizeableUtils.scaleSize(700, context),
+                  child: const SkillsView(),
                 ),
                 Container(
                   height: 500,

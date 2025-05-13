@@ -28,7 +28,8 @@ class LiquidPoolPainter extends CustomPainter {
     // Create an organic blob shape with more points for smoother animation
     final points = <Offset>[];
     final numPoints = 60; // Increased number of points for smoother shape
-    final radius = math.min(width, height) * 0.55; // Increased radius for larger area
+    final radiusX = width * 0.45;
+    final radiusY = height * 0.5;
     
     for (int i = 0; i < numPoints; i++) {
       final angle = (i / numPoints) * 2 * math.pi;
@@ -36,10 +37,11 @@ class LiquidPoolPainter extends CustomPainter {
       final noise = math.sin(angle * 2 + animation * 0.8) * 0.06 +
                    math.cos(angle * 3 - animation * 0.6) * 0.06 +
                    math.sin(angle * 5 + animation * 0.4) * 0.04;
-      final r = radius * (1 + noise);
+      final rX = radiusX * (1 + noise);
+      final rY = radiusY * (1 + noise);
       points.add(Offset(
-        centerX + r * math.cos(angle),
-        centerY + r * math.sin(angle),
+        centerX + rX * math.cos(angle),
+        centerY + rY * math.sin(angle),
       ));
     }
 

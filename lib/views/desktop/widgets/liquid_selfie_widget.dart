@@ -61,7 +61,7 @@ class _LiquidSelfieWidgetState extends State<LiquidSelfieWidget> with SingleTick
         ClipRRect(
           borderRadius: BorderRadius.circular(20),
           child: SizedBox(
-            width: widget.width * 0.75,
+            width: widget.width * 0.6,
             height: widget.height * 1,
             child: Image.asset(
               'assets/images/img_selfie.png',
